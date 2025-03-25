@@ -1,0 +1,203 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #2c3e50;
+}
+
+.navbar {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    font-size: 1.3em;
+    color: #34495e;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+/* Vertical Divider */
+.divider {
+    height: 24px;
+    width: 2px;
+    background-color: #34495e;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.task-container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.column-pending,
+.column-completed {
+    width: 45%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #34495e;
+    text-align: center;
+}
+
+h3 {
+    color: #34495e;
+    text-align: center;
+}
+
+button:not(.del_btn) {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    padding: 8px 16px;
+    margin: 3px;
+    border: 0;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover:not(.del_btn) {
+    background: linear-gradient(135deg, #e0efec, rgb(31, 12, 235));
+    transform: scale(1.05);
+}
+
+.del_btn{
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    padding: 8px 16px;
+    margin: 3px;
+    border: 0;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+}
+.del_btn:hover{
+    background: linear-gradient(135deg, #e0efec, rgb(235, 12, 12));
+    transform: scale(1.05);
+}
+
+.form-container {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 20%;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.task {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.desc-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.title_category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.task-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.task-description { 
+    font-size: 1em;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+.buttons_cmplt_del{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+hr {
+    border-top: 1px solid purple;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar a {
+        margin: 5px 0;
+    }
+    .divider {
+        display: none;
+    }
+    .form-container {
+        width: 90%;
+    }
+    .task-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column-pending,
+    .column-completed {
+        width: 90%;
+    }
+}

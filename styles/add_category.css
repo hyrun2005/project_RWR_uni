@@ -1,0 +1,188 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-wrap: wrap; /* Ensures navbar items wrap on small screens */
+}
+
+.navbar a {
+    font-size: 1.2em;
+    color: #34495e;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+/* Vertical Divider */
+.divider {
+    height: 30px;
+    width: 2px;
+    background-color: #34495e;
+    margin: 0 20px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+/* Username */
+.username {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #34495e;
+    padding-left: 10px;
+}
+
+/* Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 80px;
+}
+
+/* Responsive Form Inputs */
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Responsive Buttons */
+button {
+    width: 100%;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: white;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e0efec, #0c2eeb);
+    transform: scale(1.05);
+}
+
+/* Message Display */
+.message {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #0c2eeb;
+}
+
+/* 🌍 RESPONSIVE DESIGN */
+/* Tablets and Small Laptops */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .navbar a {
+        font-size: 1em;
+        padding: 8px 12px;
+        margin: 5px;
+    }
+
+    .form-container {
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 5px 0;
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    .divider {
+        display: none; /* Hide divider on mobile */
+    }
+
+    .username {
+        margin-top: 5px;
+        font-size: 1em;
+    }
+
+    .form-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+

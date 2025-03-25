@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Welcome to Task Manager</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Task Manager</h1>
+    <p>Organize your tasks efficiently.</p>
+    
+    <div id="buttons">
+        <a href="pages/login.php" class="btn">Login</a>
+        <a href="pages/register.php" class="btn">Register</a>
+        <a href="pages/dashboard.php" class="btn">Dashboard</a>
+    </div>
+</div>
+
+<script>
+    if (localStorage.getItem("isLoggedIn") === "true") {
+        document.getElementById("buttons").innerHTML = `
+            <a href="pages/dashboard.html" class="btn">Go to Dashboard</a>
+            <a href="pages/logout.html" class="btn" style="background: red;">Logout</a>
+        `;
+    }
+</script>
+
+</script>
+
+</body>
+</html>
