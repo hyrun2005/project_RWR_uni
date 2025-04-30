@@ -22,7 +22,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    flex-wrap: wrap; /* Ensures navbar items wrap on small screens */
+    flex-wrap: wrap; 
 }
 
 .navbar a {
@@ -125,7 +125,6 @@ button:hover {
     color: #0c2eeb;
 }
 
-/* 🌍 RESPONSIVE DESIGN */
 /* Tablets and Small Laptops */
 @media (max-width: 1024px) {
     .navbar {
@@ -162,7 +161,7 @@ button:hover {
     }
 
     .divider {
-        display: none; /* Hide divider on mobile */
+        display: none; 
     }
 
     .username {
